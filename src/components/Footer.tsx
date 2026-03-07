@@ -23,15 +23,15 @@ export const Footer = () => {
   ];
 
   return (
-    <footer className="py-12 px-6 border-t border-border">
-      <div className="container max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
-        <a href="#accueil" className="font-body text-lg tracking-[0.25em] text-gradient-gold font-medium">
+    <footer className="py-8 md:py-12 px-4 md:px-6 border-t border-border">
+      <div className="container max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4 md:gap-6">
+        <a href="#accueil" className="font-body text-sm md:text-lg tracking-[0.25em] text-gradient-gold font-medium">
           manejousselin
         </a>
-        <p className="font-body text-xs text-muted-foreground tracking-wider">
-          © {new Date().getFullYear()} manejousselin — Tous droits réservés
+        <p className="font-body text-[10px] md:text-xs text-muted-foreground tracking-wider">
+          © {new Date().getFullYear()} manejousselin
         </p>
-        <div className="flex items-center gap-5">
+        <div className="flex items-center gap-4 md:gap-5">
           {socials.map((s) => (
             <a
               key={s.name}

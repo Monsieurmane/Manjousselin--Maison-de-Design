@@ -29,8 +29,8 @@ export const Navbar = () => {
         scrolled ? "bg-background/95 backdrop-blur-md border-b border-border" : "bg-transparent"
       }`}
     >
-      <div className="container max-w-7xl mx-auto flex items-center justify-between py-5 px-6">
-        <a href="#accueil" className="font-body text-sm md:text-base tracking-[0.25em] text-gradient-gold font-medium">
+      <div className="container max-w-7xl mx-auto flex items-center justify-between py-3 md:py-5 px-4 md:px-6">
+        <a href="#accueil" className="font-body text-[10px] sm:text-xs md:text-base tracking-[0.15em] md:tracking-[0.25em] text-gradient-gold font-medium shrink-0">
           manejousselin
         </a>
 
@@ -50,7 +50,7 @@ export const Navbar = () => {
 
         {/* Mobile toggle */}
         <button onClick={() => setOpen(!open)} className="md:hidden text-foreground">
-          {open ? <X size={24} /> : <Menu size={24} />}
+          {open ? <X size={20} /> : <Menu size={20} />}
         </button>
       </div>
 
@@ -63,13 +63,13 @@ export const Navbar = () => {
             exit={{ opacity: 0, height: 0 }}
             className="md:hidden bg-background/98 backdrop-blur-lg border-b border-border overflow-hidden"
           >
-            <ul className="flex flex-col items-center gap-6 py-8">
+            <ul className="flex flex-col items-center gap-5 py-6">
               {links.map((l) => (
                 <li key={l.href}>
                   <a
                     href={l.href}
                     onClick={() => setOpen(false)}
-                    className="font-body text-sm tracking-[0.2em] uppercase text-muted-foreground hover:text-primary transition-colors"
+                    className="font-body text-xs tracking-[0.2em] uppercase text-muted-foreground hover:text-primary transition-colors"
                   >
                     {l.label}
                   </a>
