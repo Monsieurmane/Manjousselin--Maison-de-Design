@@ -29,25 +29,25 @@ const projects = [
 
 export const PortfolioSection = () => {
   return (
-    <section id="realisations" className="py-32 px-6 bg-secondary/40">
+    <section id="realisations" className="py-16 md:py-32 px-4 md:px-6 bg-secondary/40">
       <div className="container max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
-          className="text-center mb-20"
+          className="text-center mb-12 md:mb-20"
         >
-          <p className="font-body text-xs tracking-[0.3em] uppercase text-primary mb-4">
+          <p className="font-body text-[10px] md:text-xs tracking-[0.3em] uppercase text-primary mb-4">
             Portfolio
           </p>
-          <h2 className="font-heading text-4xl md:text-5xl font-light text-foreground mb-6">
+          <h2 className="font-heading text-3xl md:text-5xl font-light text-foreground mb-6">
             Nos <span className="italic font-display text-gradient-gold">Réalisations</span>
           </h2>
           <div className="w-16 h-px line-gold mx-auto" />
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
           {projects.map((p, i) => (
             <motion.div
               key={p.title}
@@ -65,12 +65,12 @@ export const PortfolioSection = () => {
                   loading="lazy"
                 />
               </div>
-              <div className="p-8">
-                <p className="font-body text-xs tracking-[0.2em] uppercase text-primary mb-2">
+              <div className="p-5 md:p-8">
+                <p className="font-body text-[10px] md:text-xs tracking-[0.2em] uppercase text-primary mb-2">
                   {p.category}
                 </p>
-                <h3 className="font-heading text-2xl text-foreground mb-3">{p.title}</h3>
-                <p className="font-body text-sm text-muted-foreground leading-relaxed font-light">
+                <h3 className="font-heading text-xl md:text-2xl text-foreground mb-2 md:mb-3">{p.title}</h3>
+                <p className="font-body text-xs md:text-sm text-muted-foreground leading-relaxed font-light">
                   {p.description}
                 </p>
               </div>

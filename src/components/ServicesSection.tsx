@@ -52,7 +52,7 @@ const item = {
 
 export const ServicesSection = () => {
   return (
-    <section id="services" className="py-32 px-6">
+    <section id="services" className="py-16 md:py-32 px-4 md:px-6">
       <div className="container max-w-7xl mx-auto">
         {/* Section header */}
         <motion.div
@@ -60,12 +60,12 @@ export const ServicesSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
-          className="text-center mb-20"
+          className="text-center mb-12 md:mb-20"
         >
-          <p className="font-body text-xs tracking-[0.3em] uppercase text-primary mb-4">
+          <p className="font-body text-[10px] md:text-xs tracking-[0.3em] uppercase text-primary mb-4">
             Ce que nous offrons
           </p>
-          <h2 className="font-heading text-4xl md:text-5xl font-light text-foreground mb-6">
+          <h2 className="font-heading text-3xl md:text-5xl font-light text-foreground mb-6">
             Nos <span className="italic font-display text-gradient-gold">Services</span>
           </h2>
           <div className="w-16 h-px line-gold mx-auto" />
@@ -83,15 +83,15 @@ export const ServicesSection = () => {
             <motion.div
               key={s.title}
               variants={item}
-              className="group bg-background p-10 hover:bg-secondary/50 transition-all duration-500"
+              className="group bg-background p-6 md:p-10 hover:bg-secondary/50 transition-all duration-500"
             >
               <s.icon
                 size={28}
                 strokeWidth={1}
-                className="text-primary mb-6 group-hover:scale-110 transition-transform duration-300"
+                className="text-primary mb-4 md:mb-6 group-hover:scale-110 transition-transform duration-300"
               />
-              <h3 className="font-heading text-xl text-foreground mb-3">{s.title}</h3>
-              <p className="font-body text-sm text-muted-foreground leading-relaxed font-light">
+              <h3 className="font-heading text-lg md:text-xl text-foreground mb-2 md:mb-3">{s.title}</h3>
+              <p className="font-body text-xs md:text-sm text-muted-foreground leading-relaxed font-light">
                 {s.description}
               </p>
             </motion.div>
