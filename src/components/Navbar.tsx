@@ -62,10 +62,10 @@ export const Navbar = () => {
             {theme === "light" ? <Moon size={16} /> : <Sun size={16} />}
           </button>
           <button
-            onClick={() => setLang(lang === "fr" ? "en" : "fr")}
+            onClick={() => setLang(lang === "fr" ? "en" : lang === "en" ? "de" : "fr")}
             className="font-body text-[10px] tracking-[0.15em] uppercase text-muted-foreground hover:text-primary transition-colors border border-border px-2 py-1"
           >
-            {lang === "fr" ? "EN" : "FR"}
+            {lang.toUpperCase()}
           </button>
         </div>
 
